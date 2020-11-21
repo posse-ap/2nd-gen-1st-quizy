@@ -1,0 +1,41 @@
+
+    .yahho{
+        background: linear-gradient(transparent 70%, yellow 50%);
+        display: inline-block;
+        margin-right: 13%;
+    }
+
+    img{
+        display: block;
+        margin: 0 auto;
+    }
+    ul{
+        list-style: none;
+    }
+    .btn{
+
+
+    }
+    .box{
+    width:100%;
+    text-align: left;
+
+    }
+    .btn2{
+        /* font-size:1.4em; */
+        font-weight: 800;
+        background-color:white;
+        width: 567px;
+        text-align: left;
+        padding: 13px;
+        margin: 10px 0;
+        border: 1px solid #ebebeb;
+        /* border-bottom: solid 4px #ebebeb; */
+        height: 50px;
+        box-shadow: 1px 2px 2px -2px;
+        margin:5px;
+    }
+    .box{
+        /* margin: 0 auto; */
+        text-align: center;
+    }
