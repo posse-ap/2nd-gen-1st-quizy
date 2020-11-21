@@ -1,0 +1,27 @@
+.yellowline{background:rgba(0, 0, 0, 0) linear-gradient(transparent 60%, #ffff7f 40%); display:inline-block;
+     line-height: 1;
+    
+
+
+
+
+}
+.button{
+margin-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 90%;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.6);/* 枠線 */
+    background-color: #fff; /* 背景色 */
+    box-shadow: 1px 1px 2px rgb(65, 60, 60); 
+    display:inline-flex;
+    border:none;}
+    button:active {color:#0000ff;} 
+    label{background: red;}
+
+.body{
+     margin: auto;
+}
+    
+
+    ul {list-style-type: none;padding:0} /* 点と隙間削除*/
