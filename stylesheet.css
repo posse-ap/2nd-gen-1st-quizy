@@ -1,0 +1,26 @@
+ul{
+    list-style: none;
+}
+li {
+    box-shadow: 0 3px 2px -2px grey;
+    border: 1px solid #ebebeb;
+    width: 65%;
+    /* height: 50px; */
+    margin:10px;
+    padding: 13px;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+h2{
+    background: linear-gradient(transparent 70%, yellow 50%
+    );
+    display: inline-block;
+}
+img{
+    display: block;
+}
+
+.monnme{
+    margin-left: 25%;
+}
