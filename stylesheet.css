@@ -1,26 +1,112 @@
+html{
+    min-width:300px;
+}
+
+body{
+    margin: 0;
+    /* max-width: 800px; */
+}
+
 ul{
     list-style: none;
+    padding: 0;
 }
+
 li {
     box-shadow: 0 3px 2px -2px grey;
     border: 1px solid #ebebeb;
-    width: 65%;
+    width: center; 
     /* height: 50px; */
-    margin:10px;
+    margin:10px 0;
     padding: 13px;
     font-weight: 600;
     cursor: pointer;
+    /* font-size: 17px; */
 
 }
 h2{
-    background: linear-gradient(transparent 70%, yellow 50%
-    );
+   background: linear-gradient(transparent 70%, yellow 50%);
     display: inline-block;
 }
+
 img{
     display: block;
+    margin: 0;
+    max-width: 100%;
+    width: 80vw; 
 }
 
 .monnme{
-    margin-left: 25%;
+    margin: 0 auto;
+    width:80%;
+    max-width: 600px;
+}
+
+.red{
+    background:#FD6647;
+    color: white; 
+}
+
+.blue{
+    background: #08B3F0;
+    color: white;
+}
+
+.hidden_answer1_success{
+    box-shadow: 0 3px 2px -2px grey;
+    border:1px solid #ebebeb;
+    width: center; 
+    margin:0;
+    padding: 10px;
+    /* display:none; */
+}
+
+#seikai{
+    font-weight: 600;
+}
+
+/* #hidden_answer1_wrong{
+    box-shadow: 0 3px 2px -2px grey;
+    border: 1px solid #ebebeb;
+    width: center; 
+    margin:0;
+    padding: 0;
+    display:none;
+} */
+
+.seikai{
+    margin-bottom: 10px;
+    margin-top:0;
+    font-weight: 600;
+    background: linear-gradient(transparent 70%,#FD6647 50%);
+    display: inline-block;
+    padding: 0;
+}
+
+.bluebar{
+    background: linear-gradient(transparent 70%,#08B3F0 50%);
+    display: inline-block;
+}
+
+.redbar{
+    background: linear-gradient(transparent 70%,#FD6647 50%);
+    display: inline-block;
+}
+
+.fuseikai{
+    margin-bottom: 10px;
+    margin-top:0;
+    font-weight: 600;
+    /* background: linear-gradient(transparent 70%,#08B3F0 50%);
+    display: inline-block; */
+    margin:0;
+    padding: 0;
+}
+
+.show{
+    display:block;
+}
+
+.cantclick{
+    pointer-events: none;
 }
