@@ -1,0 +1,52 @@
+.quiz h2 {
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 600;
+    background: linear-gradient(transparent 70%,#f7ff4e 0);
+    display: inline-block;
+}
+.quiz li {
+    display: block;
+    border: 1px solid #ebebeb;
+    padding: 13px;
+    margin: 10px 0;
+    font-weight: 600;
+    cursor: pointer;
+    width:500px;
+}
+
+.itimonnme{
+    margin:0 auto;
+    width:50%;
+}
+.aka{
+   color:white;
+   background-color:#fd6647;
+}
+.ao{
+    color:white;
+    background-color:#08B3F0;
+}
+.kome{
+    display: block;
+    border: 1px solid #ebebeb;
+    padding: 13px;
+    margin: 10px 0;
+    font-weight: 600;
+    cursor: pointer;
+    width:500px;
+}
+.seikaikabatu{
+    background: linear-gradient(transparent 70%,#fd6647 0);
+    display: inline-block;
+}
+.seikaikabatu2{
+    background: linear-gradient(transparent 70%,#08B3F0 0);
+    display: inline-block;
+}
+.kurikkudekinai{
+    pointer-events: none;
+}
+#seikainohyouji{
+    font-weight: 400;
+}
