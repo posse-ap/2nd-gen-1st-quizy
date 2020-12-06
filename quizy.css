@@ -1,0 +1,78 @@
+.monnme{
+    margin:0 auto;
+    width: 70%;
+ }
+ 
+ ul {
+     list-style: none;
+ }
+ 
+ li {
+     margin-bottom: 10px;
+     -webkit-box-shadow: 0 3px 2px -2px rgba(0,0,0,.13);
+     border:1px solid #ebebeb;   
+     /* width:65%;  */
+     cursor: pointer;
+     padding: 13px;
+     font-weight: 600;
+ }
+ h2 {
+     /* text-decoration: underline #87CEFA; */
+     background: linear-gradient(transparent 70%, yellow 50%);
+     display: inline-block;
+ }
+ 
+ img{
+   display: block;    
+   width: 80vw;
+   margin: 0;
+   max-width: 100%;
+   
+ }
+ 
+ .red{
+     color:white;
+     background:#fd6647;
+ }
+ 
+ .blue{
+     color:white;
+     background-color:#08b3f0;
+ }
+ 
+ .target{
+     margin-bottom: 10px;
+     -webkit-box-shadow: 0 3px 2px -2px rgba(0,0,0,.13);
+     border:1px solid #ddc6c6;   
+     /* width:65%;  */
+     cursor: pointer;
+     padding: 13px;
+     font-weight: 600;
+ }
+
+ #trueis{
+     font-weight:400;
+ }
+
+ .ansT{
+     background: linear-gradient(transparent 70%, #08b3f0 50%);
+     display: inline-block;
+ }
+ 
+ .ansF{
+     background: linear-gradient(transparent 70%, #fd6647 50%);
+     display: inline-block;
+ }
+ 
+ .cantclick{
+     pointer-events:none;
+ }
+
+ html{
+     min-width: 300px;
+ }
+
+ body{
+     margin: 0;
+     max-width: 3000px;
+ }
