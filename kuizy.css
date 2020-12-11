@@ -1,6 +1,6 @@
 
 
-.under_1 {
+.under_line {
 background:linear-gradient(transparent 40%,yellow);
 
 }
@@ -15,12 +15,13 @@ background:linear-gradient(transparent 40%,yellow);
         font-size:98%;
         display:inline-block;
         text-align:center;
+        display:flex;
         /* line-height:100px; */
 
 }
-.button{
-      display:flex;
-}
+/* .button{
+      
+} */
 
 .blue{
       color:white;
