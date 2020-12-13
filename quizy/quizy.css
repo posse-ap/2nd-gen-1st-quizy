@@ -1,81 +1,98 @@
+    /*classsの並べ替え、後に書いたものが優先されるので全体に当たるものは前にする。*/
 
-    .yahho{
+    .maintaitol {
+        text-align: center;
+    }
+
+    .mondai {
         background: linear-gradient(transparent 70%, yellow 50%);
         display: inline-block;
-        margin-right: 40%;
-    }
-    
-    .center{
-        margin-left: auto;
-        margin-right: auto;
-        width:50%;
-        vertical-align: middle;
-    }
-    img{
-        display: block;
-        margin: 0 auto;
-    }
-    ul{
-        list-style: none;
     }
 
-    .red{
+    .center {
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        vertical-align: middle;
+        padding-left: 0;
+        padding-right: 0;
+        max-width: 567px;
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        /*イメージは指定しないと元の大きさになる*/
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .red {
         color: white;
         background-color: #FD6647;
     }
-    .blue{
+
+    .blue {
         color: white;
         background-color: #08B3F0;
     }
 
+    .box {
+        width: 100%;
+        text-align: #FD6647;
+    }
 
-    .box{
-    width:100%;
-    text-align:  #FD6647;
+    .tigai {
+        background: linear-gradient(transparent 70%, #FD6647 50%);
+        display: inline-block;
     }
-    .tigai{
-        background: linear-gradient(transparent 70%,   #FD6647 50%);
-        display:inline-block;
-        
+
+    .yes {
+        background: linear-gradient(transparent 70%, #08B3F0 50%);
+        display: inline-block;
     }
-    .yes{
-        background: linear-gradient(transparent 70%,   #08B3F0 50%);
-        display:inline-block;
-    }
-    .box{
+
+    .box {
         /* margin: 0 auto; */
         text-align: center;
     }
-   
-    .cantclick{
+
+    .cantclick {
         pointer-events: none;
     }
-    li{
+
+    li {
         /* font-size:1.4em; */
         font-weight: 800;
         /* background-color:white; */
-        width: 567px;
+        /* width: 567px; */
         text-align: left;
         padding: 13px;
         border: 1px solid #ebebeb;
         border-bottom: solid 4px #ebebeb;
         /* height: 50px; */
         box-shadow: 1px 2px 2px -2px;
-       margin-right: 50%;
+        /* margin-right: 50%; */
     }
-    .hako{
-            font-weight: 800;
-            width: 567px;
-            text-align: left;
-            padding: 13px; 
-            border: 1px solid #ebebeb;
-            box-shadow: 1px 2px 2px -2px;
-            margin-right:30%;
-            margin:auto;
-            display:inline-block
-        }
 
-        .btn{
-            margin:auto;
-        }
-    
+    .hako {
+        font-weight: 800;
+        /* width: 567px; */
+        text-align: left;
+        padding: 13px;
+        border: 1px solid #ebebeb;
+        box-shadow: 1px 2px 2px -2px;
+        /* margin-right:30%; */
+        margin: auto;
+        /* display:inline-block */
+    }
+
+    .btn {
+        width: 567px;
+        margin: auto;
+    }
