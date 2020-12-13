@@ -3,9 +3,41 @@ html{
 }
 
 body{
-    margin: 0;
-    /* max-width: 800px; */
+    margin-left: auto;
+    margin-right:auto;
+    /* padding:0;
+    border:0; */
+    max-width: 800px;
 }
+
+.monnme{
+    margin: 0 auto;
+    width: 90%;
+    max-width: 600px;
+}
+
+
+.title{
+    font-size:19px;
+    margin:0;
+    margin-bottom: 10px;
+}
+
+h2{
+    font-size: large;
+   background: linear-gradient(transparent 70%, yellow 50%);
+    display: inline-block;
+}
+
+
+img{
+    display: block;
+    margin:0 auto;
+    max-width:100%;
+    width: 80vw; 
+}
+
+/* ------------------- BASE choices visuals -----------------------------*/
 
 ul{
     list-style: none;
@@ -22,26 +54,13 @@ li {
     font-weight: 600;
     cursor: pointer;
     /* font-size: 17px; */
-
-}
-h2{
-   background: linear-gradient(transparent 70%, yellow 50%);
-    display: inline-block;
 }
 
-img{
-    display: block;
-    margin: 0;
-    max-width: 100%;
-    width: 80vw; 
-}
 
-.monnme{
-    margin: 0 auto;
-    width:80%;
-    max-width: 600px;
-}
+/* -------CLICKED choices visuals--------------------------- */
 
+
+/*------------------------- Button change---------------------- */
 .red{
     background:#FD6647;
     color: white; 
@@ -52,35 +71,22 @@ img{
     color: white;
 }
 
+.cantclick{
+    pointer-events: none;
+}
+
+/* ------------------------ answer reveal --------------------- */
 .hidden_answer1_success{
     box-shadow: 0 3px 2px -2px grey;
     border:1px solid #ebebeb;
     width: center; 
     margin:0;
     padding: 10px;
-    /* display:none; */
 }
+
 
 #seikai{
     font-weight: 600;
-}
-
-/* #hidden_answer1_wrong{
-    box-shadow: 0 3px 2px -2px grey;
-    border: 1px solid #ebebeb;
-    width: center; 
-    margin:0;
-    padding: 0;
-    display:none;
-} */
-
-.seikai{
-    margin-bottom: 10px;
-    margin-top:0;
-    font-weight: 600;
-    background: linear-gradient(transparent 70%,#FD6647 50%);
-    display: inline-block;
-    padding: 0;
 }
 
 .bluebar{
@@ -93,20 +99,32 @@ img{
     display: inline-block;
 }
 
+
+.seikai{
+    margin-bottom: 10px;
+    margin-top:0;
+    font-weight: 600;
+    background: linear-gradient(transparent 70%,#FD6647 50%);
+    display: inline-block;
+    padding: 0;
+}
+
+
+
+/* #hidden_answer1_wrong{
+    box-shadow: 0 3px 2px -2px grey;
+    border: 1px solid #ebebeb;
+    width: center; 
+    margin:0;
+    padding: 0;
+    display:none;
+} */
+
+/* 
 .fuseikai{
     margin-bottom: 10px;
     margin-top:0;
     font-weight: 600;
-    /* background: linear-gradient(transparent 70%,#08B3F0 50%);
-    display: inline-block; */
     margin:0;
     padding: 0;
-}
-
-.show{
-    display:block;
-}
-
-.cantclick{
-    pointer-events: none;
-}
+} */
