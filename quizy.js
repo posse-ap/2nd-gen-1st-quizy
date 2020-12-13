@@ -1,23 +1,22 @@
 'use strict';
+
 const takawa = document.getElementById('wrong1');
 const kouwa = document.getElementById('wrong2');
 const takanawa = document.getElementById('success');
 // const reveal1 = document.getElementById('answer1');
 
-// const fuseikai = document.getElementById('fuseikai');
+const answer1 =document.getElementById('hidden_answer1_success');
+// const wronganswer1 =document.getElementById('hidden_answer1_wrong');
+
 const seikai = document.getElementById('seikai');
 const seikaiexp = document.getElementById('seikaiexp');
+// const fuseikai = document.getElementById('fuseikai');
 
 const seikaiword = document.createTextNode("正解！");
 const fuseikaiword = document.createTextNode("不正解！");
 const fuseikaiexp = document.createTextNode("正解は「たかなわ」です！");
 
 
-const answer1 =document.getElementById('hidden_answer1_success');
-// const wronganswer1 =document.getElementById('hidden_answer1_wrong');
-
-// wronganswer1.style.display = "none";
-// rightanswer1.style.display = "none";
 
 takawa.onclick = function() {
     takawa.classList.add('red');
