@@ -1,39 +1,52 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quizy</title>
     <link rel="stylesheet" href="qizy.css">
 </head>
+
 <body>
-    <h2 class="line">1.この地名はなんて読む?</h2>
-    <img src="https://d1khcm40x1j0f.cloudfront.net/quiz/34d20397a2a506fe2c1ee636dc011a07.png" alt="高輪の漢字">
-    <ul>
-        <li>こうわ</li>
-        <li>たかわ</li>
-        <li>たかなわ</li>
-    </ul>
-    <h2 class="line">2.この地名はなんて読む?</h2>
-    <img src="https://d1khcm40x1j0f.cloudfront.net/quiz/512b8146e7661821c45dbb8fefedf731.png" alt="亀戸の漢字">
-    <ul>
-        <li>かめど</li>
-        <li>かめいど</li>
-        <li>かめと</li>
-    </ul>
-    <h2 class="line">3.この地名はなんて読む?</h2>
-    <img src="https://d1khcm40x1j0f.cloudfront.net/quiz/ad4f8badd896f1a9b527c530ebf8ac7f.png" alt="麹町の漢字">
-    <ul>
-        <li>おかとまち</li>
-        <li>こうじまち</li>
-        <li>かゆまち</li>
-    </ul>
-    <h2 class="line">4.この地名はなんて読む?</h2>
-    <img src="https://d1khcm40x1j0f.cloudfront.net/quiz/ee645c9f43be1ab3992d121ee9e780fb.png" alt="御成門の漢字">
-    <ul>
-        <li>ごせいもん</li>
-        <li>おかどもん</li>
-        <li>おなりもん</li>
-    </ul>
+
+    <div class='container-wrapper'>
+        <h2 class="line">1.この地名はなんて読む?</h2>
+        <img src="https://d1khcm40x1j0f.cloudfront.net/quiz/34d20397a2a506fe2c1ee636dc011a07.png" alt="高輪の漢字">
+        <ul>
+            <li class="aaa1" id="button0">こうわ</li>
+            <li  class="aaa1" id="button1">たかわ</li>
+            <li   class="aaa1"id="button2">たかなわ</li>
+            <div id="resultbox">
+                <p id="result" class="result1 result2"></p>
+                <p id="setumei"></p>
+            </div>
+        </ul>
+
+
+        <h2 class="line">2.この地名はなんて読む?</h2>
+        <img src="https://d1khcm40x1j0f.cloudfront.net/quiz/512b8146e7661821c45dbb8fefedf731.png" alt="亀戸の漢字">
+        <ul>
+            <li id="button">かめど</li>
+            <li id="button">かめいど</li>
+            <li id="button">かめと</li>
+        </ul>
+        <h2 class="line">3.この地名はなんて読む?</h2>
+        <img src="https://d1khcm40x1j0f.cloudfront.net/quiz/ad4f8badd896f1a9b527c530ebf8ac7f.png" alt="麹町の漢字">
+        <ul>
+            <li>おかとまち</li>
+            <li>こうじまち</li>
+            <li>かゆまち</li>
+        </ul>
+        <h2 class="line">4.この地名はなんて読む?</h2>
+        <img src="https://d1khcm40x1j0f.cloudfront.net/quiz/ee645c9f43be1ab3992d121ee9e780fb.png" alt="御成門の漢字">
+        <ul>
+            <li>ごせいもん</li>
+            <li>おかどもん</li>
+            <li>おなりもん</li>
+        </ul> 
+    </div>
+    <script src="qizy.js"></script>
 </body>
+
 </html>

@@ -20,3 +20,32 @@ li {
         background: linear-gradient(transparent 70%,#f7ff4e 0);
         display: inline-block;
 }
+
+.container-wrapper{
+        max-width: 650px;
+        width: 100%;
+        margin: 0 auto;
+ }
+ 
+ .redbox{
+        background-color:#fd6647;
+        color:white;
+ }
+ .bluebox{
+         background-color:#08b3f0;
+         color:white;
+ }
+ .resultbox{
+        padding: 17px;
+        border: 1px solid #ddd;    
+ }
+ #result{
+         font-weight: 600;
+        display:inline-block;
+}
+.result1{
+        background: linear-gradient(transparent 80%,#08b3f0 0);
+}
+.result2{
+        background: linear-gradient(transparent 80%,#fd6647 0);
+}
