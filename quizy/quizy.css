@@ -1,27 +1,69 @@
+body
+{
+  width: 700px;
+  margin-right: auto;
+  margin-left : auto;
+}
+
+
 ul {
-    list-style: none;
+    list-style: none; /*リストの点無くす*/
   }
   
-  li{
-    display: block;
-    border: 1px solid #ebebeb;
-    padding: 13px;
-    margin: 10px 0;
-    font-weight: 600;
-    cursor: pointer;
-    box-shadow: 0 3px 2px -2px rgba(0,0,0,.13);
-    width: 70%;
+.button{
+    display: block;/*かたまり*/
+    border: 1px solid #ebebeb;/*枠線の太さ、一本線、色*/
+    padding: 13px;/*内側の余白*/
+    margin: 10px 0;/*外側の余白*/
+    font-weight: 600;/*文字の太さ*/
+    cursor: pointer;/*カーソルのスタイル*/
+    box-shadow: 0 3px 2px -2px rgba(0,0,0,.13);/*ボックスの影、影の色*/
   }
 
 h2{
     font-size: 17px;
-    line-height: 20px;
-    font-weight: 600;
-    background: linear-gradient(transparent 50%,#f7ff4e 0);
-    display: inline-block;
-    
+    line-height: 20px;/*行間*/
+    font-weight: 600;/*文字の太さ*/
+    background: linear-gradient(transparent 70%,#f7ff4e 0);/*アンダーラインの色(グラデーション)*/
+    display: inline-block;/*インラインブロック要素*/
   }
+  
 .quiz .quiz-image {
-    display: block;
-    width: 100%;
+    display: block;/*ブロック要素*/
+    width: 100%;/*幅*/
+}
+
+.fail{
+background: #fd6647;
+color: #fff;
+}
+
+.success{
+  background: #08b3f0;
+  color: #fff;
+}
+
+.quiz-result{
+  padding: 17px;
+  border: 1px solid #ddd;
+}
+
+.quiz .quiz-result-title {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.quiz-result-title-failed {
+  background: linear-gradient(transparent 80%,#fd6647 0);
+  display: inline-block;
+  font-weight: 600;
+}
+
+.quiz-result-title-succeeded {
+  background: linear-gradient(transparent 80%,#08b3f0 0);
+  display: inline-block;
+  font-weight: 600;
 }
