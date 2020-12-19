@@ -40,3 +40,7 @@ right1.onclick = function() {
     wrong2.classList.add ('cantclick');
     right1.classList.add ('cantclick');
 }
+
+for (let i = 0; i < array.length; i++) {
+     if(`$array[i]`)
+}
