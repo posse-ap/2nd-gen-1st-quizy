@@ -55,3 +55,13 @@ li {
 ul {
     padding-left: 0;
 }
+
+.pushed-correct {
+    background: #08b3f0;
+    color: #fff;
+}
+
+.pushed-incorrect {
+    background: #fd6647;
+    color: #fff;
+}
