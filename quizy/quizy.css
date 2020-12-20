@@ -3,12 +3,7 @@
     .maintaitol {
         text-align: center;
     }
-
-    .mondai {
-        background: linear-gradient(transparent 70%, yellow 50%);
-        display: inline-block;
-    }
-
+    
     .center {
         margin-left: auto;
         margin-right: auto;
@@ -17,6 +12,16 @@
         padding-left: 0;
         padding-right: 0;
         max-width: 567px;
+    }
+
+    .box {
+        width: 100%;
+        text-align: #FD6647;
+    }
+
+    .mondai {
+        background: linear-gradient(transparent 70%, yellow 50%);
+        display: inline-block;
     }
 
     img {
@@ -42,10 +47,7 @@
         background-color: #08B3F0;
     }
 
-    .box {
-        width: 100%;
-        text-align: #FD6647;
-    }
+    
 
     .tigai {
         background: linear-gradient(transparent 70%, #FD6647 50%);
