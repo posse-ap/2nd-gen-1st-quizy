@@ -60,12 +60,12 @@ li {
 
 
 /*------------------------- Button change---------------------- */
-.red{
+.wrongButton{
     background:#FD6647;
     color: white; 
 }
 
-.blue{
+.successButton{
     background: #08B3F0;
     color: white;
 }
@@ -75,7 +75,7 @@ li {
 }
 
 /* ------------------------ answer reveal --------------------- */
-.hidden_answer1_success{
+.answerBox{
     box-shadow: 0 3px 2px -2px grey;
     border:3px solid #ebebeb;
     width: center; 
@@ -88,12 +88,12 @@ li {
     font-weight: 600;
 }
 
-.bluebar{
+.successBar{
     background: linear-gradient(transparent 70%,#08B3F0 50%);
     display: inline-block;
 }
 
-.redbar{
+.wrongBar{
     background: linear-gradient(transparent 70%,#FD6647 50%);
     display: inline-block;
 }
@@ -107,23 +107,3 @@ li {
     display: inline-block;
     padding: 0;
 }
-
-
-
-/* #hidden_answer1_wrong{
-    box-shadow: 0 3px 2px -2px grey;
-    border: 1px solid #ebebeb;
-    width: center; 
-    margin:0;
-    padding: 0;
-    display:none;
-} */
-
-/* 
-.fuseikai{
-    margin-bottom: 10px;
-    margin-top:0;
-    font-weight: 600;
-    margin:0;
-    padding: 0;
-} */
