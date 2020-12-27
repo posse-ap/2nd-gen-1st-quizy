@@ -65,3 +65,40 @@ ul {
     background: #fd6647;
     color: #fff;
 }
+
+.answerP_correct {
+    margin: 0;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: inline-block;
+    background: linear-gradient(transparent 80%, #08b3f0 0);
+}
+
+.answerP_incorrect {
+    margin: 0;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: inline-block;
+    background: linear-gradient(transparent 80%, #fd6647 0);
+}
+
+.answerP_detail {
+    font-weight: normal !important;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.answerLi {
+    padding: 17px;
+    cursor: default;
+    box-shadow: 0 0 0 0;
+    border: 1px solid #ddd;
+}
