@@ -41,9 +41,7 @@ li{
  box-sizing: border-box;
  
 }
-.cantclick{
-  pointer-events: none;
-}
+
 .seikai1{background: linear-gradient(transparent 70%, #08b3f0 80%);
   /* text-align: left; */
   display: inline-block;
@@ -86,5 +84,8 @@ body{
   min-width: 500px;
   margin: 0;
   max-width: 2000px;
+}
+.cantclick{
+  pointer-events: none;
 }
 
