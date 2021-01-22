@@ -32,7 +32,7 @@ images[9] = "https://d1khcm40x1j0f.cloudfront.net/words/34508ddb0789ee73471b9f17
 let i, k, m;
 const shuffle = (choices) => {
     for (k = 0; k < choices.length; k++) {
-        for (let m = choices.length - 1; m >= 0; m--) {
+        for (m = choices.length - 1; m >= 0; m--) {
             const j = Math.floor(Math.random() * (m + 1));
             [choices[m], choices[j]] = [choices[j], choices[m]];
         };
@@ -43,15 +43,15 @@ const shuffle = (choices) => {
 
 choices.map(shuffle);
 
+let p, a;
 let b = [];
-for (let p = 0; p < choices.length; p++) {
-    let a = choices[p].indexOf(answerBoxAnswer[p]);
+for (p = 0; p < choices.length; p++) {
+    a = choices[p].indexOf(answerBoxAnswer[p]);
     b.push(a);
 };
 console.log(b);
 
 for (i = 0; i < choices.length; i++) {
-
     let h =
         '<div class="monnme">'
         + '<div class="monnme1">'
@@ -73,7 +73,6 @@ for (i = 0; i < choices.length; i++) {
 
 
 var clickedFunction = function (rounds, clkdButton, answer) {
-    
     let option1 = document.getElementById('option' + rounds + '-0');
     let option2 = document.getElementById('option' + rounds + '-1');
     let option3 = document.getElementById('option' + rounds + '-2');
@@ -87,14 +86,14 @@ var clickedFunction = function (rounds, clkdButton, answer) {
 
     let seikaiword = document.createTextNode(" 正解！");
     let fuseikaiword = document.createTextNode("不正解！");
-    let fuseikaiexp = document.createTextNode(`正解は「${answerBoxAnswer[rounds]}」です！`);
+    let explanation = document.createTextNode(`正解は「${answerBoxAnswer[rounds]}」です！`);
 
     option1.classList.add('cantclick');
     option2.classList.add('cantclick');
     option3.classList.add('cantclick');
     answerBox.classList.add('answerBox');
 
-    seikaiexp.appendChild(fuseikaiexp);
+    seikaiexp.appendChild(explanation);
     answer1.classList.add('successButton');
 
     if (answer == clkdButton) {
