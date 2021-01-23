@@ -31,7 +31,7 @@
 // s1.classList.add("cantclick");
 // s2.classList.add("cantclick");
 // s3.classList.add("cantclick");
-// }
+// 
 // s3.onclick=function(){
 // s3.classList.add("red");
 // s2.classList.add("blue");
@@ -100,16 +100,16 @@ console.log(newestArray)
 
 
 
-let box=[];
-for(let i=0; i<option.length; i++){
-let a=option[i].indexOf(seikai[i]);
-box.push(a);
-}
-console.log(box);
+// let box=[];
+// for(let i=0; i<option.length; i++){--;;;
+// let a=option[i].indexOf(seikai[i]);
+// box.push(a);
+// }
+// console.log(box);
 
 
 for (let i = 0; i < 10; i++) {
-   
+//    idをs1-1-1のように三つに変更したがうまくいかず一時中断
     let one =
         '<div class="mainvisual">'
         + '<h2> <span class="under">'
@@ -118,13 +118,13 @@ for (let i = 0; i < 10; i++) {
         + `<img src= ${image[i + 1]} alt="picture">`
         + '</div>'
         + '<ul>'
-        + `<li id="s${i+1}-1"class="button"onclick="judge(${i+1},1,${newestArray[i][0]})">`
+        + `<li id="s${i+1}-1-${newestArray[i][0]}"class="button"onclick="judge(${i+1},1,${newestArray[i][0]})">`
         + `<b>${option[i][newestArray[i][0]]}</b>`
         + '</li>'
-        + `<li id="s${i+1}-2"class="button"onclick="judge(${i+1},2,${newestArray[i][1]})">`
+        + `<li id="s${i+1}-2-${newestArray[i][1]}"class="button"onclick="judge(${i+1},2,${newestArray[i][1]})">`
         + `<b>${option[i][newestArray[i][1]]}</b>`
         + '</li>'
-        + `<li id="s${i+1}-3"class="button"onclick="judge(${i+1},3,${newestArray[i][2]})">`
+        + `<li id="s${i+1}-3-${newestArray[i][2]}"class="button"onclick="judge(${i+1},3,${newestArray[i][2]})">`
         + `<b>${option[i][newestArray[i][2]]}</b>`
         + '</li>'
         + '</ul>'
@@ -138,24 +138,47 @@ for (let i = 0; i < 10; i++) {
 }
 // 引数３つ設定→if文（seikainumber==2)
 function judge(question,pushednumber,seikainumber){
-    let seikaidesu=document.getElementById('s'+question+'-'+seikainumber);
-    let place=document.getElementById('s'+question+'-'+pushednumber);
-    let s1=document.getElementById('s'+question+'-1');
-    let s2=document.getElementById('s'+question+'-2');
-    let s3=document.getElementById('s'+question+'-3');
-     //place.classList.add("red");
-    //  seikaidesu.classList.add("blue");
+    // let seikaidesu=document.getElementById('s'+question+'-'+seikainumber);
+    let place=document.getElementById('s'+question+'-'+pushednumber+'-'+seikainumber);
+    let s1=document.getElementById('s'+question+'-1'+'-0');
+    let s4=document.getElementById('s'+question+'-1'+'-1');
+    let s7=document.getElementById('s'+question+'-1'+'-2');
+    let s2=document.getElementById('s'+question+'-2'+'-0');
+    let s5=document.getElementById('s'+question+'-2'+'-1');
+    let s8=document.getElementById('s'+question+'-2'+'-2');
+    let s3=document.getElementById('s'+question+'-3'+'-0');
+    let s6=document.getElementById('s'+question+'-3'+'-1');
+    let s9=document.getElementById('s'+question+'-3'+'-2');
+    // let place2=document.getElementById('s'+question+'-'+seikainumber),
+    // let seikaichoice=document.getElementById('s'+question+'-'+pushednumber+'-'+seikainumber+'1');
+    // let seikaichoice2=document.getElementById('s'+question+'-'+pushednumber+'-'+seikainumber+'2');
+    s7.classList.add("blue");
+    s8.classList.add("blue");
+    s9.classList.add("blue");
 if (seikainumber==2){
- place.classList.add("blue");
+//  place.classList.add("blue");
 
  }
- else  {
-     place(seikainumber==2)
+//  else if(seikainumber==1) {
+    
+//      place.classList.add("red");
+    //  seikaichoice.classList.add("blue");
+//  }
+ else{
+   
      place.classList.add("red");
+    //  seikaichoice2.classList.add("blue");
+ }
      
-    }
+    
     s1.classList.add("cantclick");
     s2.classList.add("cantclick");
     s3.classList.add("cantclick");
+    s4.classList.add("cantclick");
+    s5.classList.add("cantclick");
+    s6.classList.add("cantclick");
+    s7.classList.add("cantclick");
+    s8.classList.add("cantclick");
+    s9.classList.add("cantclick");
     
 };
