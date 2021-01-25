@@ -152,9 +152,19 @@ function judge(question,pushednumber,seikainumber){
     // let place2=document.getElementById('s'+question+'-'+seikainumber),
     // let seikaichoice=document.getElementById('s'+question+'-'+pushednumber+'-'+seikainumber+'1');
     // let seikaichoice2=document.getElementById('s'+question+'-'+pushednumber+'-'+seikainumber+'2');
+    // s7.classList.add("blue");
+    // s8.classList.add("blue");
+    // s9.classList.add("blue");
+
+if(null !== s7){
     s7.classList.add("blue");
+}
+if(null !== s8){
     s8.classList.add("blue");
+}
+if(null !== s9){
     s9.classList.add("blue");
+}
 if (seikainumber==2){
 //  place.classList.add("blue");
 
