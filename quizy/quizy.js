@@ -1,4 +1,4 @@
-const sentakusi = ([
+let sentakusi = ([
   ["たかなわ", "こうわ", "たかわ"],
   ["かめいど", "かめと", "かめど"],
   ["こうじまち", "おかとまち", "かゆまち"],
@@ -9,21 +9,57 @@ const sentakusi = ([
   ["おかちまち", "みとちょう", "ごしろちょう"],
   ["ししぼね", "しこね", "ろっこつ"],
   ["こぐれ", "こばく", "こしゃく"],
-]).map(shuffle);
+]);
 const atari = [ 'たかなわ','かめいど','こうじまち','おなりもん','とどろき','しゃくじい','ぞうしき','おかちまち','ししぼね','こぐれ'];
 
-function shuffle(sentakusi){
-let r
-let temp
-for(let i = sentakusi.length - 1; i >= 0; i--){
+var shuffledarray = [];
+for (let a =0; a<10;a++){
+var array = [0, 1, 2,];
+let r;
+let temp;
+for(let i = array.length - 1; i >= 0; i--){
   r = Math.floor(Math.random()*( i + 1));
-  temp = sentakusi[i];
-  sentakusi[i] = sentakusi[r];
-  sentakusi[r] = temp;
-}
-console.log(sentakusi);
+  temp = array[i];
+  array[i] = array[r];
+  array[r] = temp;
 };
+shuffledarray.push(array);
+};
+// function shuffle(sentakusi) {
+//   for (let k = sentakusi.length -1; k > 0; k--) { // k = ランダムに選ぶ終点のインデックス
+//     const j = Math.floor(Math.random() * (k + 1));  // j = 範囲内から選ぶランダム変数
+//     // console.log(j);
+//     [sentakusi[j], sentakusi[k]] = [sentakusi[k], sentakusi[j]]; // 分割代入 k と j を入れ替える
+//   };
+//   return sentakusi;
+// };
 
+// var shufflearray =[];
+// for (let i =0; i<sentakusi.length; i++){
+// var array = [0,1,2];
+// var latestarray = [];
+
+// for (let k = array.length -1; k > 0; k--) { // k = ランダムに選ぶ終点のインデックス
+//   const j = Math.floor(Math.random() * (k + 1));  // j = 範囲内から選ぶランダム変数
+//   [array[j], array[k]] = [array[k], array[j]]; // 分割代入 k と j を入れ替える
+// };
+// return array;
+// };
+
+
+// function shuffle(sentakusi){
+// let r
+// let temp
+// for(let i = sentakusi.length - 1; i >= 0; i--){
+//   r = Math.floor(Math.random()*( i + 1));
+//   temp = sentakusi[i];
+//   sentakusi[i] = sentakusi[r];
+//   sentakusi[r] = temp;
+// };
+// return sentakusi;
+
+// };
+// console.log(sentakusi);
 
 for (let i = 0; i < 10; i++) {
   const h =
@@ -35,10 +71,9 @@ for (let i = 0; i < 10; i++) {
     + `<img src='./クイジー写真/${i}.png' alt="高輪">`
     + '<div class="btn">'
     + '<ul>'
-    + `<li  id="success-${i}"onclick="ok(${i})">${sentakusi[i][0]}</li>`
-    + `<li  id="miss1-${i}"onclick="miss1(${i})">${sentakusi[i][1]}</li>`
-    + `<li  id="miss2-${i}">${sentakusi[i][2]}</li>`
-
+    + `<li  id="s${i}-1-${shuffledarray[i][0]}"onclick="judge(${i},1,${shuffledarray[i][0]})">${sentakusi[i][shuffledarray[i][0]]}</li>`
+    + `<li  id="s${i}-2-${shuffledarray[i][1]}"onclick="judge(${i},2,${shuffledarray[i][1]})">${sentakusi[i][shuffledarray[i][1]]}</li>`
+    + `<li  id="s${i}-3-${shuffledarray[i][2]}"onclick="judge(${i},3,${shuffledarray[i][2]})">${sentakusi[i][shuffledarray[i][2]]}</li>`
     + `<div id="hide-${i}">`
     + `<p id="torf-${i}">`
     + '</p>'
@@ -52,20 +87,20 @@ for (let i = 0; i < 10; i++) {
   document.write(h);
 };
 
-
 // let hide = document.getElementById("hide");
 // let torf = document.getElementById("torf");
 // let seikou3 = document.getElementById("seikou");
 let seikou = document.createTextNode("正解");
 let sippai = document.createTextNode("不正解");
 // let seikou2 = document.createTextNode("正解は"+atari+"です");
-
-
 // console.log(array_success);
+
+function judge(question,pushnumber,correctnumber){
+let s = document.getElementById("s"+question+"-"+pushnumber+"-"+correctnumber);
+let s1 =document.getElementById("s"+question+"-"+1+"-"+shuffledarray[i][0]);
 
 
 function ok(number) {
-  
   let seikai = document.getElementById("success-"+number);
   let miss1 = document.getElementById("miss1-" + number);
   let miss2 = document.getElementById("miss2-" + number);
@@ -99,6 +134,7 @@ function ok(number) {
   seikai.classList.add('cantclick');
 };
 
+};
 
 //   array_miss2[i].onclick = function () {
 //   array_miss2[i].classList.add("red");
@@ -195,6 +231,9 @@ function ok(number) {
 //   seikou3.push(document.getElementById("seikou-" + i));
 // };
 
+// console.log(array_success);
+// console.log(array_miss1);
+// console.log(array_miss2);
 // console.log(array_success);
 // console.log(array_miss1);
 // console.log(array_miss2);
