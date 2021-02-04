@@ -87,6 +87,17 @@ for (let i = 0; i < 10; i++) {
   document.write(h);
 };
 
+// document.getElementById("success-0").onclick = function () {
+//   document.getElementById("success-0").classList.add("blue");
+//   torf.appendChild(seikou);
+//   seikou3.appendChild(seikou2);
+//   hide.classList.add("hako");
+//   torf.classList.add('yes');
+//   document.getElementById('miss1-0').classList.add('cantclick');
+//   document.getElementById('miss2-0').classList.add('cantclick');
+//   success.classList.add('cantclick');
+// };
+
 // let hide = document.getElementById("hide");
 // let torf = document.getElementById("torf");
 // let seikou3 = document.getElementById("seikou");
@@ -168,16 +179,6 @@ function ok(number) {
 // console.log(miss1);
 // console.log(miss2);
 
-// document.getElementById("success-0").onclick = function () {
-//   document.getElementById("success-0").classList.add("blue");
-//   torf.appendChild(seikou);
-//   seikou3.appendChild(seikou2);
-//   hide.classList.add("hako");
-//   torf.classList.add('yes');
-//   document.getElementById('miss1-0').classList.add('cantclick');
-//   document.getElementById('miss2-0').classList.add('cantclick');
-//   success.classList.add('cantclick');
-// };
 
 // for (let i = 0; i < 10; i++) {
 // let miss1 = document.getElementById('miss1-0');

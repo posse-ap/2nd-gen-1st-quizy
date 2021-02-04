@@ -17,6 +17,7 @@
     .box {
         width: 100%;
         text-align: #FD6647;
+        
     }
 
     .mondai {
@@ -35,10 +36,11 @@
         margin: auto;
     }
 
-    ul {
+    .uls {
         list-style: none;
-        padding-left: 0;
-        padding-right: 0;
+        /* padding-left: 0;
+        padding-right: 0; */
+        
     }
 
     .red {
@@ -56,11 +58,13 @@
     .tigai {
         background: linear-gradient(transparent 70%, #FD6647 50%);
         display: inline-block;
+        font-weight: 800;
     }
 
     .yes {
         background: linear-gradient(transparent 70%, #08B3F0 50%);
         display: inline-block;
+        font-weight: 800;
     }
 
     .box {
@@ -78,6 +82,9 @@
         border: 1px solid #ebebeb;
         border-bottom: solid 4px #ebebeb;
         box-shadow: 1px 2px 2px -2px;
+        display: block;
+        margin-top: 2;
+        margin-bottom: 2;
     }
 
     .hako {
@@ -89,4 +96,12 @@
         margin: auto;
     }
 
+   .fonto{
+    font-weight: 200;
+    line-height: 3;
+   }
+   
+   .gyou{
+    line-height: 100;   
+   }
    
