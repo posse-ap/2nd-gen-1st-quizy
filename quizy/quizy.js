@@ -65,8 +65,15 @@ for (let i = 0; i < 10; i++){
     x +=
     '</ul>' +
     `<div class="torf" id="torf${i}">` +
-    `<p id="result${i}"></p>` +
-    `<p id="resultText${i}">正解は「` + answer[i] + '」です！</p>' +
+    `<p id="result${i}"></p>`;
+
+    if ( i === 8 ){
+        x += `<p id="resultText${i}">江戸川区にあります。</p>`
+    } else {
+        x += `<p id="resultText${i}">正解は「` + answer[i] + '」です！</p>'
+    };
+
+    x +=
     '</div>' +
     '</div>';
         
