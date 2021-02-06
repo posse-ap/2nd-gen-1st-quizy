@@ -49,9 +49,9 @@ for (let i = 0; i < places.length; i++) {
 
 
     //----------------------↓↓↓ Making HTML 1st ↓↓↓----------------------------------------------------
-    var questionHTML = '<section class="quiz box-container">'
+    var questionHTML = '<section class="box-container">'
         + `<h2 id='heading${i}'>${i + 1}. この地名はなんて読む？</h2>`
-        + `<img src='${pictures[i]}' alt='問題${i + 1}の画像'>`
+        + `<img src='${pictures[i]}' alt='問題${i + 1}の画像' class='quiz-image'>`
         + `<ul id='question${i}'>`
         + `<li id='place${i}-${unshuffled[0]}'>${places[i][0]}</li>`
         + `<li id='place${i}-${unshuffled[1]}'>${places[i][1]}</li>`

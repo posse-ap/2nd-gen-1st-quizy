@@ -99,3 +99,7 @@ ul {
     box-shadow: 0 0 0 0;
     border: 1px solid #ddd;
 }
+
+.quiz-image {
+    width: 100%;
+}
