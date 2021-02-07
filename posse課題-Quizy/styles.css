@@ -61,6 +61,8 @@ img {
 
 /* End of リセット css */
 
+
+
 /* ここからcss */
 
 .container {
@@ -133,7 +135,6 @@ img {
 
 .pointer-events {
   pointer-events: none;
-  /* cursor: pointer; */
 }
 
 .img-fluid {
