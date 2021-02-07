@@ -1,8 +1,8 @@
-body
-{
-  width: 700px;
-  margin-right: auto;
-  margin-left : auto;
+.main{
+  width: 570px;
+  margin: 0 auto;
+  margin-top: 90px;
+  margin-bottom: 90px;
 }
 
 
@@ -10,7 +10,7 @@ ul {
     list-style: none; /*リストの点無くす*/
   }
   
-.button{
+.answerlist{
     display: block;/*かたまり*/
     border: 1px solid #ebebeb;/*枠線の太さ、一本線、色*/
     padding: 13px;/*内側の余白*/
@@ -22,8 +22,8 @@ ul {
 
 h2{
     font-size: 17px;
-    line-height: 20px;/*行間*/
-    font-weight: 600;/*文字の太さ*/
+    /* line-height: 20px; */
+    /* font-weight: 600; */
     background: linear-gradient(transparent 70%,#f7ff4e 0);/*アンダーラインの色(グラデーション)*/
     display: inline-block;/*インラインブロック要素*/
   }
@@ -58,12 +58,12 @@ color: #fff;
 
 .quiz-result-title-failed {
   background: linear-gradient(transparent 80%,#fd6647 0);
-  display: inline-block;
-  font-weight: 600;
+  /* display: inline-block;
+  font-weight: 600; */
 }
 
 .quiz-result-title-succeeded {
   background: linear-gradient(transparent 80%,#08b3f0 0);
-  display: inline-block;
-  font-weight: 600;
+  /* display: inline-block;
+  font-weight: 600; */
 }
