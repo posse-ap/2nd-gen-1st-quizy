@@ -79,6 +79,7 @@ img{
     font-family: 'Hiragino Kaku Gothic ProN';
 }
 .cantclick {
+    display: inline-block;
     pointer-events: none;
 }
 /*class名と{の間に半角スペース*/
