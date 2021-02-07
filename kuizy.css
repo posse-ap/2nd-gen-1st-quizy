@@ -1,7 +1,13 @@
 
 
+.main{
+      margin: 0 auto;
+}
+
 .under_line {
 background:linear-gradient(transparent 40%,yellow);
+text-align: center;
+margin:0 auto;
 
 }
 .button {width: 353px;
@@ -31,10 +37,11 @@ background:linear-gradient(transparent 40%,yellow);
       color:white;
       background-color:#FD6647;
 }
-.box{   padding: 17px;
+.box{   display:none;
+        padding: 17px;
         border :solid 1px #ddd;
-        /* width: 400px;
-        height:60px;
+        width: 432px;
+        /* height:60px;
         padding:1px 100px;background-color: #ffff;
          font-weight:800;
         box-shadow: 0 2px 2px 0 #F2F2F2;
@@ -46,6 +53,12 @@ background:linear-gradient(transparent 40%,yellow);
         text-align:center;
         
 } */
+}
+
+.answerbox{
+    display: none;
+    height: 77px;
+    line-height: 30px;
 }
 .ansT{
       background:linear-gradient(transparent 70%,blue);
@@ -60,4 +73,7 @@ background:linear-gradient(transparent 40%,yellow);
 }
 #true_is{
       font-weight:400;
+}
+.syutugenn{
+      display:inline-block;
 }
