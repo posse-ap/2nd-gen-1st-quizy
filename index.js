@@ -179,16 +179,31 @@ if (seikainumber==2){
      place.classList.add("red");
     //  seikaichoice2.classList.add("blue");
  }
-     
-    
-    s1.classList.add("cantclick");
-    s2.classList.add("cantclick");
-    s3.classList.add("cantclick");
-    s4.classList.add("cantclick");
-    s5.classList.add("cantclick");
-    s6.classList.add("cantclick");
-    s7.classList.add("cantclick");
-    s8.classList.add("cantclick");
-    s9.classList.add("cantclick");
-    
+ if(null !== s1){
+    s1.classList.add("cantclick"); 
+ }
+ if(null !== s2){
+    s2.classList.add("cantclick"); 
+ }
+ if(null !== s3){
+    s3.classList.add("cantclick"); 
+ }
+ if(null !== s4){
+    s4.classList.add("cantclick"); 
+ }
+ if(null !== s5){
+    s5.classList.add("cantclick"); 
+ }
+ if(null !== s6){
+    s6.classList.add("cantclick"); 
+ }
+ if(null !== s7){
+    s7.classList.add("cantclick"); 
+ }
+ if(null !== s8){
+    s8.classList.add("cantclick"); 
+ }
+ if(null !== s9){
+    s9.classList.add("cantclick"); 
+ }
 };
