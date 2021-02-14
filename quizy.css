@@ -10,16 +10,16 @@
     color: white;
     background-color: #08B3F0;
 }
-.red1 {
+#red1 {
     background: linear-gradient(transparent 80%, #fd6647 0);
     display: inline-block;
 }
-.blue1 {
+#blue1 {
     background: linear-gradient(transparent 80%, #08b3f0 0);
     display: inline-block;
 }
-.comentbox {
-    display: block;
+.commentbox {
+    display: none;
     border: 1px solid #ebebeb;
     padding: 13px;
     margin: 10px 0;
@@ -28,6 +28,14 @@
     box-shadow: 0 3px 2px 2px rgba(0, 0, 0, .13);
     -webkit-box-shadow: 0 3px 2px -2px rgba(0, 0, 0, .13);
     font-size: 100%;
+}
+.commentbox-block{
+    display: block;
+}
+.answershow {
+    font-size: 16px;
+    font-family: 'Hiragino Kaku Gothic ProN';
+    font-weight: 300;
 }
 .cantclick {
     pointer-events: none;
