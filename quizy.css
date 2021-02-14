@@ -45,7 +45,6 @@
      -webkit-box-shadow: 0 3px 2px -2px rgba(0,0,0,.13);
      border:1px solid #ddc6c6;   
      /* width:65%;  */
-     cursor: pointer;
      padding: 13px;
      font-weight: 600;
  }
@@ -68,11 +67,8 @@
      pointer-events:none;
  }
 
- html{
-     min-width: 300px;
- }
-
  body{
-     margin: 0;
-     max-width: 3000px;
+     margin: 0 auto;
+     max-width: 800px;
+     min-width: 300px;
  }
