@@ -46,7 +46,6 @@
 
 // 画像の挿入
 let image = new Array()
-
 image[1] = "./img/picture1.png";
 image[2] = "./img/picture2.png";
 image[3] = "./img/picture.3.png";
@@ -60,7 +59,6 @@ image[10] = "./img/picture.10.png";
 
 // 選択しの挿入
 let option = [
-//    [ ['たかわ'],[ 'こうわ'],['たかなわ',1],] 
     ['たかわ', 'こうわ', 'たかなわ'],
     ['かめど', 'かめと', 'かめいど'],
     ['かゆまち', 'おかとまち', 'こうじまち'],
@@ -72,10 +70,11 @@ let option = [
     ['ろっこつ', 'しこね', 'ししぼね'],
     ['こしゃく', 'こばく', 'こぐれ']
 ];
-let seikai = [
-    'たかなわ','かめいど','こうじまち','おなりもん','とどろき','しゃくじい','ぞうしき','おかちまち','ししぼね','こぐれ'
-];
 
+// 正解一覧
+let answerchoices = [
+   '', 'たかなわ','かめいど','こうじまち','おなりもん','とどろき','しゃくじい','ぞうしき','おかちまち','ししぼね','こぐれ'
+];
 
 // シャッフル関数(行列１０個)
 var newestArray=[]
@@ -84,7 +83,6 @@ for (let i = 0; i < 10; i++) {
 var newArray= [];
 var n;
 var k;
-
 while (array.length > 0) {
   n = array.length;
   k = Math.floor(Math.random() * n);
@@ -93,23 +91,11 @@ while (array.length > 0) {
   array.splice(k, 1);
 }
  newestArray.push(newArray)
-}
-
+};
 console.log(newestArray)
 
-
-
-
-// let box=[];
-// for(let i=0; i<option.length; i++){--;;;
-// let a=option[i].indexOf(seikai[i]);
-// box.push(a);
-// }
-// console.log(box);
-
-
+// HTML
 for (let i = 0; i < 10; i++) {
-//    idをs1-1-1のように三つに変更したがうまくいかず一時中断
     let one =
         '<div class="mainvisual">'
         + '<h2> <span class="under">'
@@ -128,17 +114,29 @@ for (let i = 0; i < 10; i++) {
         + `<b>${option[i][newestArray[i][2]]}</b>`
         + '</li>'
         + '</ul>'
-        + '<div id="hako">'
-        + '<p id="torf"></p>'
-        + '<p id="seikai"></p>'
+        + `<div id="hako${i+1}">`
+        + `<p id="torf${i+1}"></p>`
+        + `<p id="seikai${i+1}"></p>`
         + '</div>'
         + '</div>';
 
     document.write(one);
 }
-// 引数３つ設定→if文（seikainumber==2)
+
+//押したらジャッジ関数
 function judge(question,pushednumber,seikainumber){
-    // let seikaidesu=document.getElementById('s'+question+'-'+seikainumber);
+
+ // 正解不正解の箱
+    const hako=document.getElementById('hako'+question);
+    hako.classList.add("hako2");
+    const kotae= document.getElementById('torf'+question);
+    const seikai= document.getElementById('seikai'+question);
+    const seikai1=document.createTextNode("正解！");
+    const huseikai1=document.createTextNode("不正解！");
+　　const seikai2=document.createTextNode(`正解は「${answerchoices[question]}」です！`);
+    seikai.appendChild(seikai2);
+
+    // 選択肢定義
     let place=document.getElementById('s'+question+'-'+pushednumber+'-'+seikainumber);
     let s1=document.getElementById('s'+question+'-1'+'-0');
     let s4=document.getElementById('s'+question+'-1'+'-1');
@@ -149,13 +147,8 @@ function judge(question,pushednumber,seikainumber){
     let s3=document.getElementById('s'+question+'-3'+'-0');
     let s6=document.getElementById('s'+question+'-3'+'-1');
     let s9=document.getElementById('s'+question+'-3'+'-2');
-    // let place2=document.getElementById('s'+question+'-'+seikainumber),
-    // let seikaichoice=document.getElementById('s'+question+'-'+pushednumber+'-'+seikainumber+'1');
-    // let seikaichoice2=document.getElementById('s'+question+'-'+pushednumber+'-'+seikainumber+'2');
-    // s7.classList.add("blue");
-    // s8.classList.add("blue");
-    // s9.classList.add("blue");
-
+   
+// 正解をあおくする
 if(null !== s7){
     s7.classList.add("blue");
 }
@@ -165,20 +158,21 @@ if(null !== s8){
 if(null !== s9){
     s9.classList.add("blue");
 }
-if (seikainumber==2){
-//  place.classList.add("blue");
 
+// 正解の表示
+if (seikainumber==2){
+    kotae.appendChild(seikai1);
+   kotae.classList.add("seikai1");
  }
-//  else if(seikainumber==1) {
-    
-//      place.classList.add("red");
-    //  seikaichoice.classList.add("blue");
-//  }
+
+// 不正解の表示
  else{
-   
+    kotae.appendChild(huseikai1);
+    kotae.classList.add("huseikai1")
      place.classList.add("red");
-    //  seikaichoice2.classList.add("blue");
  }
+ 
+//  ボタン押せないように
  if(null !== s1){
     s1.classList.add("cantclick"); 
  }
