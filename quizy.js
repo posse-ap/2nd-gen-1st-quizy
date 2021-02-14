@@ -32,7 +32,7 @@ let images = ["https://d1khcm40x1j0f.cloudfront.net/quiz/34d20397a2a506fe2c1ee63
 let i, k, m;
 const shuffle = (choices) => {
     for (m = choices.length - 1; m >= 0; m--) {
-        const j = Math.floor(Math.random() * choices.length);
+        const j = Math.floor(Math.random() * (m+1));
         [choices[m], choices[j]] = [choices[j], choices[m]];
     };
     return choices;
@@ -41,16 +41,19 @@ const shuffle = (choices) => {
 choices.map(shuffle);
 
 /////////////////////////////シャッフル後の正解の位置確保////////////
-let p, a;
-let b = [];
-for (p = 0; p < choices.length; p++) {
-    a = choices[p].indexOf(answerBoxAnswer[p]);
-    b.push(a);
-};
-console.log(b);
+// let p, a;
+// let b = [];
+// for (p = 0; p < choices.length; p++) {
+//     a = choices[p].indexOf(answerBoxAnswer[p]);
+//     b.push(a);
+// };
+// console.log(b);
 
 /////////////////////////////html format/////////////////////////////
 for (i = 0; i < choices.length; i++) {
+    /////////シャッフル後の正解の位置確保////////////
+    let a = choices[i].indexOf(answerBoxAnswer[i]);
+    /////////////////////////////////////////////////
     let h =
         '<div class="monnme">'
         + `<div class="monnme1" id="monnme${i}">`
@@ -58,7 +61,7 @@ for (i = 0; i < choices.length; i++) {
         + `<img src= ${images[i]} alt="No.${i}.photo">`
         + '<ul>';
     for (let c = 0; c < choices[0].length; c++) {
-        h = h + `<li id="option${i}-${c}" onclick="clickedFunction(${i},'${c}','${b[i]}')">${choices[i][c]}</li>`
+        h = h + `<li id="option${i}-${c}" onclick="clickedFunction(${i},'${c}','${a}')">${choices[i][c]}</li>`
     };
     h = h
         + '</ul>'
@@ -71,6 +74,7 @@ for (i = 0; i < choices.length; i++) {
 };
 
 /////////////////////////////////function after clicking//////////////////////////////
+                    // 変数 (何問目か,クリックした選択肢,シャッフル後の答えの位置)
 var clickedFunction = function (rounds, clkdButton, answer) {
     let option1 = document.getElementById('option' + rounds + '-0');
     let option2 = document.getElementById('option' + rounds + '-1');
