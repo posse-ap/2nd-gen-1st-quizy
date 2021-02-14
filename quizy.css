@@ -1,15 +1,14 @@
 .main{
-  width: 570px;
-  margin: 0 auto;
-  margin-top: 90px;
-  margin-bottom: 90px;
+    width: 570px;
+    margin: 0 auto;
+    margin-top: 90px;
+    margin-bottom: 90px;
 }
-
 
 ul {
     list-style: none; /*リストの点無くす*/
   }
-  
+
 .answerlist{
     display: block;/*かたまり*/
     border: 1px solid #ebebeb;/*枠線の太さ、一本線、色*/
@@ -28,42 +27,55 @@ h2{
     display: inline-block;/*インラインブロック要素*/
   }
   
+.quiz{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 .quiz .quiz-image {
     display: block;/*ブロック要素*/
     width: 100%;/*幅*/
-}
+  }
 
 .fail{
-background: #fd6647;
-color: #fff;
-}
+    background: #fd6647;
+    color: #fff;
+  }
 
 .success{
-  background: #08b3f0;
-  color: #fff;
-}
+    background: #08b3f0;
+    color: #fff;
+  }
 
 .quiz-result{
-  padding: 17px;
-  border: 1px solid #ddd;
-}
+    padding: 15px;
+    border: 1px solid #ddd;
+  }
 
 .quiz .quiz-result-title {
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  display: inline-block;
-}
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
 
 .quiz-result-title-failed {
-  background: linear-gradient(transparent 80%,#fd6647 0);
-  /* display: inline-block;
-  font-weight: 600; */
-}
+    background: linear-gradient(transparent 80%,#fd6647 0);
+    display: inline-block;
+    font-weight: 600;
+  }
 
 .quiz-result-title-succeeded {
-  background: linear-gradient(transparent 80%,#08b3f0 0);
-  /* display: inline-block;
-  font-weight: 600; */
-}
+    background: linear-gradient(transparent 80%,#08b3f0 0);
+    display: inline-block;
+    font-weight: 600;
+  }
+
+.xpush{
+    pointer-events: none;
+  }
+
+html{
+    scroll-behavior: smooth;
+  }
