@@ -1,0 +1,59 @@
+body{
+    background-color:rgb(255, 255, 255);
+}
+
+ul{
+    list-style: none;
+}
+
+h2{
+    text-decoration:underline;
+    text-decoration-color:#f7ff4e;
+}
+
+.button{
+    display: block;
+    border: 1px solid #ebebeb;
+    padding: 13px;
+    margin: 10px 0;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.blue{
+    color:white;
+    background-color:#08b3f0;
+}
+
+.red{
+    color:white;
+    background-color:#fe6647;
+}
+
+.box{
+    display: block;
+    border: 1px solid #ebebeb;
+    padding: 13px;
+    margin: 10px 0;
+    font-weight: 600;
+    cursor: pointer; 
+}
+
+.ansT{
+    text-decoration:underline;
+    text-decoration-color:#08b3f0;
+}
+
+.ansF{
+    text-decoration:underline;
+    text-decoration-color:#fe6647;
+    display
+}
+
+.cantclick{
+    pointer-events:none;
+}
+
+#seikaiha{
+    font-weight: 400;
+}
