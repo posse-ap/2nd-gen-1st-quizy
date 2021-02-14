@@ -49,7 +49,7 @@ for (let i = 0; i < places.length; i++) {
 
 
     //----------------------↓↓↓ Making HTML 1st ↓↓↓----------------------------------------------------
-    var questionHTML = '<section class="box-container">'
+    var questionHTML = '<section class="quiz box-container">'
         + `<h2 id='heading${i}'>${i + 1}. この地名はなんて読む？</h2>`
         + `<img src='${pictures[i]}' alt='問題${i + 1}の画像' class='quiz-image'>`
         + `<ul id='question${i}'>`
