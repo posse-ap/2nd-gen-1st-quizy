@@ -125,5 +125,4 @@ function judge(parts, questions) {
         scrollBy(0, position);
     };
     scrollToAns();
-
 };
