@@ -22,7 +22,57 @@ const image_box = document.getElementById("image_box");
 const loop1 = document.getElementById("loop1");
 
 
-function createquestion(question_id,each_question,true_id){
+
+//question_id 問題番号
+//selection_id 選択肢の上から数えたときの位置
+//true_id 答えの選択肢を上からかぞえたときの位置
+
+
+function check(question_id,selection_id,true_id){
+
+    //クリック無効化
+    var answerlists = document.getElementsByName('sentakusi_' + question_id);
+    answerlists.forEach(answerlist => {
+        answerlist.style.pointerEvents = 'none';
+    });
+
+   
+    //クリックした時の色の処理
+    var button_red = document.getElementById('sentakusi_' + question_id + '_' + selection_id);
+    var button_blue = document.getElementById('sentakusi_' + question_id + '_' + true_id);
+    //青だけいつでも
+    button_blue.classList.add('blue');   
+ 
+
+    var success1 = document.createTextNode('正解!');
+    var false1 = document.createTextNode('不正解!');
+    var answerbox = document.getElementById('answerbox_' + question_id);
+    var answertext = document.getElementById('answertext_' + question_id);
+    // var num = Number(click_id);
+    // console.log('num' + num);
+    // var key = Math.floor(num / 11);
+    // console.log('key:' + key);
+    console.log('answerbox' + answerbox);
+    if (selection_id == true_id) {
+        console.log('正解');
+        // answertext.classList.add('blue');
+        answertext.appendChild(success1);
+        answertext.classList.add('ansT');
+        answertext.classList.add('syutugenn');
+    } else {
+         console.log('不正解');
+         button_red.classList.add('red');
+         answertext.classList.add('ansF');
+        //  answertext.classList.add('red');
+         answertext.appendChild(false1);
+         answertext.classList.add('syutugenn');
+    }
+   answerbox.style.display = 'block';
+}
+
+
+
+function createquestion(question_id,after_shuffle_question,true_id){
 
     var main_contents = [];
 
@@ -30,15 +80,22 @@ function createquestion(question_id,each_question,true_id){
     var img_src = (question_id-1) + ".png";
     var img_tag = '<img src="' + img_src + '">';
     console.log(img_tag);
-    main_contents += '<span class="under_line">' + question_id +'.この地名はなんて読む？</span>' + img_tag  +'<ul>';
-
-    each_question.forEach(function(item,index){
-        main_contents += ' <li class="button" id ="answerlist_' + question_id + '_' + (index + 1) +'"name="answerlist_' + question_id + '" onclick="check('+ question_id + ', ' + (index + 1) + ', ' + true_id +')">' + item + '</li>' ;
+    main_contents += '<span class="under_line">' + question_id +'.この地名はなんて読む？</span>' + img_tag + '<ul>';
+    
+    after_shuffle_question.forEach(function(item,index){
+        main_contents += ' <li class="button" id ="sentakusi_' + question_id + '_' + (index + 1) +'"name="sentakusi_' + question_id + '" onclick="check('+ question_id + ', ' + (index + 1) + ', ' + (true_id + 1) +')">' + item + '</li>' ;
         
+        //id sentakusi_1_1
+        //id sentakusi_1_2
+        //id sentakusi_1_3
+        //id sentakusi_2_1
+
+        //index+1 選択肢の上からの順番
+
         console.log("ok2");
 
     });
-    main_contents += '<div id="answerbox_' + question_id + '" class="box"><p id = "answertext_' + question_id +'"></p><br> <p>正解は「' + each_question[true_id - 1] + '」です！</p> </div>';
+    main_contents += '<div id="answerbox_' + question_id + '" class="box"><p id = "answertext_' + question_id +'"></p><br> <p>正解は「' + after_shuffle_question[true_id] + '」です！</p> </div>';
 
     document.getElementById('loop1').insertAdjacentHTML('beforeend',main_contents);
     
@@ -65,13 +122,16 @@ function createhtml(){
         return array
         }
 
-        var after_shuffle = shuffle(question);
 
-        console.log(after_shuffle);
-
-        // console.log('2' + question);
+        // questionをシャッフルしたときの配列の並び順
+        var after_shuffle_question = shuffle(question);
         
-            createquestion(index+1,after_shuffle,after_shuffle.indexOf(answer) + 1);
+
+        console.log('aftershuffle' + after_shuffle_question);
+
+       
+        
+            createquestion(index+1,after_shuffle_question,after_shuffle_question.indexOf(answer));
             //index+1 = question_id
             //indexOfはanswerの場所を探すため
         })
@@ -79,47 +139,7 @@ function createhtml(){
 
 }
 
-function check(question_id,click_id,true_id){
 
-    //クリック無効化
-    var answerlists = document.getElementsByName('answerlist_' + question_id);
-    answerlists.forEach(answerlist => {
-        answerlist.style.pointerEvents = 'none';
-    });
-
-   
-
-    var button_red = document.getElementById('answerlist_' + question_id + '_' + click_id);
-    var button_blue = document.getElementById('answerlist_' + question_id + '_' + true_id);
-    // selectiontext.classList.add('red');
-    button_blue.classList.add('blue');
- 
-
-    var success1 = document.createTextNode('正解!');
-    var false1 = document.createTextNode('不正解!');
-    var answerbox = document.getElementById('answerbox_' + question_id);
-    var answertext = document.getElementById('answertext_' + question_id);
-    // var num = Number(click_id);
-    // console.log('num' + num);
-    // var key = Math.floor(num / 11);
-    // console.log('key:' + key);
-
-    if (click_id == true_id) {
-        console.log('正解');
-        // answertext.classList.add('blue');
-        answertext.appendChild(success1);
-        answertext.classList.add('ansT');
-        answertext.classList.add('syutugenn')
-    } else {
-         console.log('不正解');
-         button_red.classList.add('red');
-         answertext.classList.add('ansF');
-        //  answertext.classList.add('red');
-         answertext.appendChild(false1);
-         answertext.classList.add('syutugenn')
-    }
-   answerbox.style.display = 'block';
-}
 
 
 
